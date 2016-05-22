@@ -4,7 +4,7 @@ Adds a drop in replacement for the classic select box with an Ember Power Select
 
 ## Installation
 
-  ember install flood-simple-form-power-select
+    ember install flood-simple-form-power-select
 
 ## Usage
 
