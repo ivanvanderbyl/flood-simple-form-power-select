@@ -1,0 +1,1 @@
+export { default } from 'flood-simple-form-power-select/components/simple-form/inputs/power-select-input/component';

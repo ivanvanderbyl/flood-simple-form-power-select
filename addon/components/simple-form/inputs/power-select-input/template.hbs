@@ -1,0 +1,48 @@
+{{#if multiple}}
+  {{#power-select-multiple
+    options=options
+    selected=selectionOptions
+    allowClear=allowClear
+    placeholder=placeholder
+    disabled=disabled
+    renderInPlace=renderInPlace
+    searchEnabled=searchEnabled
+    onchange=(action 'handleSelectChange')
+    onfocus=(action 'handleFocusIn')
+    onclose=(action 'handleFocusOut')
+  as |option|}}
+    {{#if optionLabelPath}}
+      {{if (get option optionLabelPath) (get option optionLabelPath) "(Empty)"}}
+    {{else}}
+      {{#if hasBlock}}
+        {{yield option}}
+      {{else}}
+        {{option}}
+      {{/if}}
+    {{/if}}
+  {{/power-select-multiple}}
+{{else}}
+  {{#power-select
+    options=options
+    selected=selectionOptions
+    allowClear=allowClear
+    placeholder=placeholder
+    disabled=disabled
+    renderInPlace=renderInPlace
+    searchEnabled=searchEnabled
+    onchange=(action 'handleSelectChange')
+    onfocus=(action 'handleFocusIn')
+    onclose=(action 'handleFocusOut')
+
+  as |option|}}
+    {{#if optionLabelPath}}
+      {{if (get option optionLabelPath) (get option optionLabelPath) "(Empty)"}}
+    {{else}}
+      {{#if hasBlock}}
+        {{yield option}}
+      {{else}}
+        {{option}}
+      {{/if}}
+    {{/if}}
+  {{/power-select}}
+{{/if}}

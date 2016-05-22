@@ -1,0 +1,5 @@
+{{#simple-form data on-change=(action "handleFormInputChange") as |f initialValues|}}
+  {{f.input "country" type="power-select" options=countries optionDisabledPath="disabled" optionLabelPath="name" optionValuePath="isoCode" placeholder="Select your Country..." label="Country"}}
+
+  <p class="selected-country">Country: {{initialValues.country}}</p>
+{{/simple-form}}
