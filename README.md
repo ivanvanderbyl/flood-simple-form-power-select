@@ -1,12 +1,25 @@
-# Flood-simple-form-power-select
+# flood-simple-form-power-select
 
-This README outlines the details of collaborating on this Ember addon.
+Adds a drop in replacement for the classic select box with an Ember Power Select.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+  ember install flood-simple-form-power-select
+
+## Usage
+
+```hbs
+{{#simple-form data on-change=(action "handleFormInputChange") as |f|}}
+  {{f.input "country" 
+    type="power-select" 
+    collection=countries 
+    optionLabelPath="name" 
+    optionValuePath="isoCode" 
+    placeholder="Select your Country..." 
+    label="Country"
+  }}
+{{/simple-form}}
+```
 
 ## Running
 
