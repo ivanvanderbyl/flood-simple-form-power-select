@@ -99,11 +99,11 @@ export default Ember.Component.extend({
     },
 
     handleFocusIn() {
-      this.sendAction('focus-in');
+      // this.sendAction('focus-in');
     },
 
     handleFocusOut() {
-      this.sendAction('focus-out');
+      // this.sendAction('focus-out');
     },
   },
 });
